@@ -34,7 +34,7 @@ public class StudentController {
 			Student s = service.get(id);
 			return new ResponseEntity<Student>(s, HttpStatus.OK);
 		}
-		catch(NoResultException e) {
+		catch(Exception e) {
 			return new ResponseEntity<Student>(HttpStatus.NOT_FOUND);
 		}
 	}
